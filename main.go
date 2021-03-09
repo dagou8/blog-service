@@ -32,6 +32,10 @@ func init() {
 	}
 }
 
+// @title 博客系统
+// @version 1.0
+// @description Go语言编程之旅：一起用Go做项目
+// @termsOfService http://github.com/dagou8/blog-service
 func main() {
 	gin.SetMode(global.ServerSetting.RunMode)
 	router := routers.NewRouter()
@@ -42,7 +46,6 @@ func main() {
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	global.Logger.Infof("%s: go-programming-tour-book/%s", "sybil", "blog-service")
 	s.ListenAndServe()
 }
 
